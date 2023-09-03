@@ -22,7 +22,7 @@ Currently the scraper takes around 800+ seconds to scrape the required informati
 This is due to the many different pesticide and commodity ids need to be queried. 
 Consider implementing `asyncio` to speed up the IO time.
 
-The scraper queries for commodities before querying for the pesticides under them. It might be possible to directly query for the list of pesticide ids rather than going through every commodity.
+The scraper queries for the commodities directory, queries for the commodities, before querying for the pesticides under them. It might be possible to directly query for the list of pesticide ids rather than going through every commodity, however have not tried to investigate further.
 
 
 ## Additional Information

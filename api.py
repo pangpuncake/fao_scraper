@@ -42,6 +42,7 @@ def get_commodity_detail(id: str) -> CommodityDetail:
     logger.info(f"Getting commodity detail with id={id}")
     url = COMMODITY_DETAIL_URL + f"?id={id}&lang=en"
     response = requests.get(url)
+    # Replace erroneous characters
     response_text = (
         response.text.replace("\t", "").replace("\u2013", "-").replace("\x03", " ")
     )
@@ -59,6 +60,7 @@ def get_pesticide_detail(id: str) -> PesticideDetail:
     logger.info(f"Getting pesticide detail with id={id}")
     url = PESTICIDE_DETAIL_URL + f"?id={id}&lang=en"
     response = requests.get(url)
+    # Replace erroneous characters
     response_text = (
         response.text.replace("\t", "").replace("\u2013", "-").replace("\x03", " ")
     )
@@ -67,5 +69,5 @@ def get_pesticide_detail(id: str) -> PesticideDetail:
 
 
 if __name__ == "__main__":
-    # For testing purposes
+    # For testing purposes, when required
     get_pesticide_detail("269")

@@ -91,8 +91,8 @@ class PesticideMRL(BaseMRL):
         mrl_dict["pesticide"] = pesticide
         mrl_dict["commodity_code"] = mrl_dict["commodity"]["commCode"]
         mrl_dict["commodity_name"] = mrl_dict["commodity"]["name"]
-        # Delete commodity key
         mrl_dict["step"] = mrl_dict["step"]["stepCode"]
+        # Delete commodity key
         mrl_dict.pop("commodity", None)
         return pd.Series(mrl_dict)
 
