@@ -7,6 +7,7 @@ This scraper is meant to gather the data from the Codex Alimentarius provided by
 
 It specifically scrapes the Pesticide Database found [here](https://www.fao.org/fao-who-codexalimentarius/codex-texts/dbs/pestres/en/).
 
+There is sample data from a previous run in the `output` directory already.
 
 ## How To Run
 
